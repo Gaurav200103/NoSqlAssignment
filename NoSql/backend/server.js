@@ -5,9 +5,11 @@ dotenv.config();
 const app = express();
 const adminRouter = require("./routers/admin.router");
 const shopRouter = require("./routers/shop.router");
+const userRouter = require("./routers/user.router");
 
 app.use(adminRouter);
 app.use(shopRouter);
+app.use(userRouter);
 
 connectDB();
 
